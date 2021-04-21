@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyleSheet, Text, View, Image } from 'react-native';
+import { MaterialIcons } from '@expo/vector-icons';
 
 export default function Card(props) {
   return (
@@ -13,6 +14,11 @@ export default function Card(props) {
       </View>
       <View style={styles.titleWrapper}>
         <Text style={styles.title}>Dummy title</Text>
+        <MaterialIcons
+          name="favorite-border"
+          color="#72bcd4"
+          size={24}
+        />
       </View>
       <View style={styles.descriptionWrapper}>
         <Text style={styles.description}>Dummy description</Text>
@@ -50,6 +56,10 @@ const styles = StyleSheet.create({
   titleWrapper: {
     height: '10%',
     paddingHorizontal: 15,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginTop: 10,
   },
 
   title: {
