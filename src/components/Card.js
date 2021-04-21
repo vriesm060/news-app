@@ -12,10 +12,10 @@ export default function Card(props) {
         />
       </View>
       <View style={styles.titleWrapper}>
-        <Text>Dummy title</Text>
+        <Text style={styles.title}>Dummy title</Text>
       </View>
       <View style={styles.descriptionWrapper}>
-        <Text>Dummy description</Text>
+        <Text style={styles.description}>Dummy description</Text>
       </View>
     </View>
   );
@@ -52,7 +52,17 @@ const styles = StyleSheet.create({
     paddingHorizontal: 15,
   },
 
+  title: {
+    fontFamily: 'Bree-Serif',
+    fontSize: 20,
+  },
+
   descriptionWrapper: {
     paddingHorizontal: 15,
+  },
+
+  description: {
+    fontFamily: 'Kreon-Regular',
+    fontSize: 15,
   },
 });
