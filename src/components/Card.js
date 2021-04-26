@@ -1,10 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import { MaterialIcons } from '@expo/vector-icons';
 
 export default function Card(props) {
   return (
-    <View style={styles.card}>
+    <TouchableOpacity style={styles.card} onPress={() => props.navigation.navigate('NewsDetails')}>
       <View style={styles.imageWrapper}>
         <Image 
           // source={require('../../assets/news.jpeg')}
@@ -23,7 +23,7 @@ export default function Card(props) {
       <View style={styles.descriptionWrapper}>
         <Text style={styles.description}>Dummy description</Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 }
 
