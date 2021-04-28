@@ -24,6 +24,7 @@ export default function NewsListScreen(props) {
           title={item.title}
           image={item.urlToImage}
           description={item.description}
+          url={item.url}
         />
       )}
     />
