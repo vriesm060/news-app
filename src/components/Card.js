@@ -8,12 +8,14 @@ export default function Card(props) {
       <View style={styles.imageWrapper}>
         <Image 
           // source={require('../../assets/news.jpeg')}
-          source={{uri: 'https://www.conchovalleyhomepage.com/wp-content/uploads/sites/83/2020/05/BREAKING-NEWS-GENERIC-1.jpg?w=1920&h=1080&crop=1'}}
+          source={{uri: props.image}}
           style={styles.image}
         />
       </View>
       <View style={styles.titleWrapper}>
-        <Text style={styles.title}>Dummy title</Text>
+        <Text style={styles.title}>
+          { props.title.length > 25 ? props.title.slice(0, 25) + '...' : props.title }
+        </Text>
         <MaterialIcons
           name="favorite-border"
           color="#72bcd4"
@@ -21,7 +23,9 @@ export default function Card(props) {
         />
       </View>
       <View style={styles.descriptionWrapper}>
-        <Text style={styles.description}>Dummy description</Text>
+        <Text style={styles.description}>
+          { props.description.length > 150 ? props.description.slice(0, 150) + '...' : props.description }
+        </Text>
       </View>
     </TouchableOpacity>
   );
