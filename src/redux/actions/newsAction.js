@@ -5,7 +5,7 @@ export const ADD_FAVORITES = 'ADD_FAVORITES';
 
 export const fetchArticles = () => {
   return async dispatch => {
-    const url = `https://newsapi.org/v2/everything?q=tesla&from=2021-03-28&sortBy=publishedAt&apiKey=${API_KEY}`;
+    const url = `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${API_KEY}`;
     const result = await fetch(url);
     const data = await result.json();
 
